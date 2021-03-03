@@ -5,7 +5,7 @@ import {
 } from './userTypes'
 const initialState = {
   loading: false,
-  user: [],
+  users: [],
   error: '',
 }
 const userReducer = (state = initialState, action) => {
@@ -19,14 +19,14 @@ const userReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        user: action.payload,
+        users: action.payload,
         error: '',
       }
     case FETCH_USERS_FAILURE:
       return {
         ...state,
         loading: false,
-        user: [],
+        users: [],
         error: action.payload,
       }
     default:
